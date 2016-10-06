@@ -17,7 +17,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 @Configuration
-@EnableJpaRepositories
+@EnableJpaRepositories("com.github.dantonio808.fileChest.api.interfaces")
 @PropertySource("classpath:/application.properties")
 public class DatabaseConfig {
 	@Autowired

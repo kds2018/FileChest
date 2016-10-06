@@ -30,7 +30,8 @@ dependencies {
     //hibernate
    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.2.Final'
    compile group: 'org.hibernate', name: 'hibernate-validator', version: '5.2.4.Final'
-
+   //AspectJ	
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.9'
 }
 
 task wrapper(type: Wrapper) {
