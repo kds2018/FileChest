@@ -13,20 +13,20 @@ API de cadastro e gerenciamento de Arquivos.
 | -----------  | --------  |
 |     Java     |    8      |
 |    Tomcat    |    8      |
-|    Mysql     |    x 	   |
+|    Mysql     |    - 	   |
 
 #### Instalação
 ----
-1. Clonar repositório:
+1.Clonar repositório:
 ```
 $[localhost git] git clone git@github.com:diegoAntonio/FileChest.git
 ```
-2. Criar arquivos de configuração da IDE Eclipse:
+2.Criar arquivos de configuração da IDE Eclipse:
 ```
-$[localhost fileChest] ./gradlew eclipse
+$[localhost fileChest] ./gradlew build eclipse
 ```
-3. Importar o projeto para a IDE Eclipse
+3.Importar o projeto para a IDE Eclipse
 
    File -> Import Project
 ```
-4.Criar o respectivo banco no mysql, fileChest.
+4.Criar os respectivos bancos no mysql, fileChest(produção) e fileChestTest(testes).
