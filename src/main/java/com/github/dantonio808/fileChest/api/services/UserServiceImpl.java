@@ -32,6 +32,6 @@ public class UserServiceImpl implements UserService {
 	@Override
 	@Transactional(readOnly=true)
 	public User findById(Long id) {
-		return this.findById(id);
+		return this.repository.findOne(id);
 	}
 }
