@@ -26,7 +26,7 @@ $[localhost git] git clone git@github.com:diegoAntonio/FileChest.git
 $[localhost fileChest] ./gradlew build eclipse
 ```
 3.Importar o projeto para a IDE Eclipse
-
+```
    File -> Import Project
 ```
 4.Criar os respectivos bancos no mysql, fileChest(produção) e fileChestTest(testes).
