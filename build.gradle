@@ -2,7 +2,6 @@ apply plugin: 'java'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'war'
 
-
 // Versão Java JDK
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -35,6 +34,15 @@ dependencies {
 
    //AspectJ	
     compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.9'
+	
+	//Tomcat Embebbed
+	providedRuntime group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '1.1.9.RELEASE'
+	
+	//Sprin Test
+	testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.1.9.RELEASE'
+	
+	//Junit
+	testCompile group: 'junit', name: 'junit', version: '4.+'
 }
 
 task wrapper(type: Wrapper) {
