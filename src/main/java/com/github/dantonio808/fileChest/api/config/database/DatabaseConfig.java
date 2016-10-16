@@ -1,4 +1,4 @@
-package com.github.dantonio808.fileChest.api.database;
+package com.github.dantonio808.fileChest.api.config.database;
 
 import java.util.Properties;
 
