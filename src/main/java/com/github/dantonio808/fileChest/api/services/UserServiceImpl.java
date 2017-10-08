@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.github.dantonio808.fileChest.api.interfaces.UserRepository;
+import com.github.dantonio808.fileChest.api.interfaces.*;
 import com.github.dantonio808.fileChest.api.interfaces.UserService;
 import com.github.dantonio808.fileChest.api.model.User;
 
