@@ -4,6 +4,8 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,7 +30,8 @@ public class UserAuthorithies {
 	private Long id;
 
 	@Column(name = "DESCRIPTION", nullable =false)
-	private String description;
+	@Enumerated(EnumType.STRING)
+	private Authorities role;
 	
 	@ManyToMany(mappedBy = "authorities",fetch = FetchType.LAZY)
 	Set<User> users;
@@ -37,10 +40,10 @@ public class UserAuthorithies {
 		super();
 	}
 
-	public UserAuthorithies(Long id, String description, Set<User> users) {
+	public UserAuthorithies(Long id, Authorities authority, Set<User> users) {
 		super();
 		this.id = id;
-		this.description = description;
+		this.role = authority;
 		this.users = users;
 	}
 
@@ -52,19 +55,19 @@ public class UserAuthorithies {
 		this.id = id;
 	}
 
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
 	public Set<User> getUsers() {
 		return users;
 	}
 
 	public void setUsers(Set<User> users) {
 		this.users = users;
+	}
+	
+	public Authorities getRole() {
+		return role;
+	}
+
+	public void setRole(Authorities role) {
+		this.role = role;
 	}
 }

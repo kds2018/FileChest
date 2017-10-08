@@ -34,14 +34,13 @@ public class UserTest extends TestEnvironment {
 	
 	@Before
 	public void prepareTest() {
-		UserAuthorithies authority = new UserAuthorithies(new Long(1), Authorities.USER_ADMIN.getDescription(), null);
+		UserAuthorithies authority = new UserAuthorithies(new Long(1), Authorities.ROLE_ADMIN, null);
 		this.authService.addUserAuthority(authority);
-		
 	}
 	
 	@Test
 	public void testeUm() {
-		UserAuthorithies authorities = new UserAuthorithies(new Long(1), Authorities.USER_ADMIN.getDescription(), null);
+		UserAuthorithies authorities = new UserAuthorithies(new Long(1), Authorities.ROLE_ADMIN, null);
 		List<UserAuthorithies> authoritiesLst = new ArrayList<UserAuthorithies>();
 		authoritiesLst.add(authorities);
 
