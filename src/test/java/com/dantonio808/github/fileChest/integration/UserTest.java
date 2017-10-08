@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -30,10 +31,16 @@ public class UserTest extends TestEnvironment {
 	public UserTest() {
 		super();
 	}
-
+	
+	@Before
+	public void prepareTest() {
+		UserAuthorithies authority = new UserAuthorithies(new Long(1), Authorities.USER_ADMIN.getDescription(), null);
+		this.authService.addUserAuthority(authority);
+		
+	}
+	
 	@Test
 	public void testeUm() {
-		this.prepareTest();
 		UserAuthorithies authorities = new UserAuthorithies(new Long(1), Authorities.USER_ADMIN.getDescription(), null);
 		List<UserAuthorithies> authoritiesLst = new ArrayList<UserAuthorithies>();
 		authoritiesLst.add(authorities);
@@ -43,12 +50,5 @@ public class UserTest extends TestEnvironment {
 		this.service.addUser(user);
 
 		Assert.assertNotNull(this.service.findById(new Long(1)));
-	}
-	
-	//TODO: Rever isso
-	private void prepareTest() {
-		UserAuthorithies authority = new UserAuthorithies(new Long(1), Authorities.USER_ADMIN.getDescription(), null);
-		this.authService.addUserAuthority(authority);
-		
 	}
 }
