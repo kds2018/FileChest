@@ -8,6 +8,7 @@ import java.util.Arrays;
  * @author Diego
  *
  */
+//TODO:Rever essa classe
 public enum Authorities {
 	USER_ADMIN(1, "ADMIN"), USER_DEFAULT(2, "User Default");
 

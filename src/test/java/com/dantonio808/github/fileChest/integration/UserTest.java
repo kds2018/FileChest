@@ -45,6 +45,7 @@ public class UserTest extends TestEnvironment {
 		Assert.assertNotNull(this.service.findById(new Long(1)));
 	}
 	
+	//TODO: Rever isso
 	private void prepareTest() {
 		UserAuthorithies authority = new UserAuthorithies(new Long(1), Authorities.USER_ADMIN.getDescription(), null);
 		this.authService.addUserAuthority(authority);
